@@ -12,19 +12,20 @@ describe("NumberPicker", () => {
   describe("render", () => {
     test("Should find 2 buttons", () => {
       const wrapper = shallow(<NumberPicker />);
+      const buttons = wrapper.find("button");
       expect(wrapper.find("button")).toHaveLength(2);
     });
 
-    /* test("Should increment the state", () => {
+    test("Should increment the state", () => {
       const wrapper = shallow(<NumberPicker />);
-      wrapper.findOne("button").simulate("click");
-      expect(wrapper.find("p")).toBe("1");
-    }); */
+      wrapper.find(".add").simulate("click");
+      expect(wrapper.find("p").text()).toBe("1");
+    });
 
-    /* test("Should decrement the state", () => {
+    test("Should decrement the state", () => {
       const wrapper = shallow(<NumberPicker />);
-      wrapper.find("button").simulate("click");
-      expect(wrapper.find("p")).toBe("-1");
-    }); */
+      wrapper.find(".sub").simulate("click");
+      expect(wrapper.find("p").text()).toBe("-1");
+    });
   });
 });

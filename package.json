@@ -7,7 +7,7 @@
     "build": "webpack",
     "start": "node dist/bundle.js",
     "dev": "webpack-dev-server --mode development",
-    "test": "jest"
+    "test": "jest --watch"
   },
   "repository": {
     "type": "git",

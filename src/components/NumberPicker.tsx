@@ -31,11 +31,22 @@ export default class NumberPicker extends React.Component<
   }
 
   render() {
+    const { numberPicked } = this.state;
+
+    /* const buttonStyle = {
+        color: this.state.value > 10 ? '#FF0000':'#00FFFF';
+    } */
     return (
       <>
-        <button onClick={this.incrementCount}> + </button>
-        <p>{this.state.numberPicked} </p>
-        <button onClick={this.decrementCount}> - </button>
+        <button className="add" onClick={this.incrementCount}>
+          {" "}
+          +{" "}
+        </button>
+        <p>{numberPicked}</p>
+        <button className="sub" onClick={this.decrementCount}>
+          {" "}
+          -{" "}
+        </button>
       </>
     );
   }
