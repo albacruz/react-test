@@ -39,13 +39,11 @@ export default class NumberPicker extends React.Component<
     return (
       <>
         <button className="add" onClick={this.incrementCount}>
-          {" "}
-          +{" "}
+          +
         </button>
         <p>{numberPicked}</p>
         <button className="sub" onClick={this.decrementCount}>
-          {" "}
-          -{" "}
+          -
         </button>
       </>
     );

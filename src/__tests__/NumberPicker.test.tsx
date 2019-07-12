@@ -12,7 +12,6 @@ describe("NumberPicker", () => {
   describe("render", () => {
     test("Should find 2 buttons", () => {
       const wrapper = shallow(<NumberPicker />);
-      const buttons = wrapper.find("button");
       expect(wrapper.find("button")).toHaveLength(2);
     });
 
